@@ -1,0 +1,46 @@
+{
+  "name": "prompt-lock",
+  "version": "0.1.0",
+  "description": "Version-controlled prompt management for AI coding workflows — snapshot, diff, rollback, and share prompts. Git for your AI context.",
+  "type": "module",
+  "bin": {
+    "prompt-lock": "dist/cli.js",
+    "plk": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test dist/test/",
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\""
+  },
+  "files": [
+    "dist/cli.js",
+    "dist/*.js",
+    "README.md",
+    "SPEC.md"
+  ],
+  "keywords": [
+    "prompt",
+    "prompt-management",
+    "ai",
+    "llm",
+    "version-control",
+    "cli",
+    "claude-code",
+    "cursor"
+  ],
+  "license": "MIT",
+  "author": "fuleinist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fuleinist/prompt-lock.git"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0"
+  }
+}
